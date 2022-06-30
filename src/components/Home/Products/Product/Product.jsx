@@ -15,21 +15,9 @@ const Product = () => {
         <p>{product.name}</p>
         <span className="wish">Wish list: {product.likes?.length}</span>
         {isAlreadyLiked ? (
-          <HeartFilled
-            onClick={
-              isAlreadyLiked
-                ? () => console.log("dislike")
-                : () => dispatch(like(product._id))
-            }
-          />
+          <HeartFilled  onClick={()=>  console.log("dislike")  } />
         ) : (
-          <HeartOutlined
-            onClick={
-              isAlreadyLiked
-                ? () => console.log("dislike")
-                : () => dispatch(like(product._id))
-            }
-          />
+          <HeartOutlined onClick={   () => dispatch(like(product._id))  } />
         )}
       </div>
     );
